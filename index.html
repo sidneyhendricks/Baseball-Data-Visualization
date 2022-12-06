@@ -1,0 +1,154 @@
+
+<html>  
+<head>  
+<script type="text/javascript" src="app.js">
+    </script>  
+<link rel="stylesheet" href="styles.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body onload=finalviz()> 
+
+
+<div>
+<h2 class="section">Final Visualizations</h2>
+<h3>Dataset:</h3>
+Data visualization is very important for the sport of baseball. Statistics have been kept about every pitch, hit, 
+out, win, much more since the mid 1800s. This makes data analysis very fun to to because there is so much 
+data in the baseball realm. For this project I have chosen a dataset called Teams.csv from the Lahman database that includes data 
+of every year from every MLB team starting in 1871. The dataset was pretty clean, except I needed to get information 
+about the state that each MLB park was located in as well as the longitude and latitude for that state. I did this by merging
+the Teams.csv dataset with the Parks.csv dataset from seamheads.com/ballparks. The following visualizations 
+come from the merged dataset called teams1.csv. 
+<br>
+<br>
+My visualizations answer questions about how various baseball stats change from year to year and within a team. 
+<br>
+
+<h3>Visualization 1:</h3>
+This first visualization answers the following question: How have team batting averages changed over time? 
+<br>
+Batting average is calculated by dividing number of hits(H) by number of at bats (AB). I created a scatterplot
+with years on the x-axis and calculated batting average on the y-axis. The blue line that is animated across
+the scatterplot is the average batting average for each year across all teams. You can drag your mouse across 
+a point and the team name will display in a tooltip. This allows you to see which teams have the highest of lowest
+batting average for a given year. I have chosen grey for the scatterpoints because we are just looking for a general 
+pattern of points and because we want to be able to see the animated line easily. I chose blue for the animated line because it is 
+a color that is easy to see with a grey background. This graph uses point marks and bertical and horizontal spatial position channels.
+<div id="v1">
+
+    </div>
+    <h4>Plot:</h4>
+    <div id="v1_plot" class="center_plot">
+    </div><br>
+    <div id="v1_answer" class="center_plot">
+    </div>
+</div>    
+</div>
+<br>
+We can see from the plot that over time, batting average across teams has tightened up a lot and now typically ranges 
+between 0.20 and 0.28 compared to earlier years where the range is much higher and the scatter points as well as the average
+line appear to have a sinusoidal shape. 
+<br>
+
+
+<div>
+<h3>Visualization 2:</h3>
+This first visualization answers the following question: Which teams have the most home runs in a given year? 
+<br>
+I have created a bar chart with buttons where you can select a year to see a barchart that contains the number of 
+home runs in a given year for each team. I have chosen the color blue for the bar chart because it is easy to see 
+and there is no other colors displayed in the graph. This graph uses a line mark and a spatial position channel. 
+<br>
+<div id="radio_v2" class="center_plot">
+    <input type="radio" id="q2_2000" name="year" value="2000">
+    <label for="2000">2000</label>
+    <input type="radio" id="q3_2001" name="year" value="2001">
+    <label for="2001">2001</label>
+    <input type="radio" id="q3_2002" name="year" value="2002">
+    <label for="2002">2002</label>
+    <input type="radio" id="q3_2003" name="year" value="2003">
+    <label for="2003">2003</label>
+    <input type="radio" id="q3_2004" name="year" value="2004">
+    <label for="2004">2004</label>
+    <input type="radio" id="q3_2005" name="year" value="2005">
+    <label for="2005">2005</label>
+    <input type="radio" id="q3_2006" name="year" value="2006">
+    <label for="2006">2006</label>
+    <input type="radio" id="q3_2007" name="year" value="2007">
+    <label for="2007">2007</label>
+    <input type="radio" id="q3_2008" name="year" value="2008">
+    <label for="2008">2008</label>
+    <input type="radio" id="q3_2009" name="year" value="2009">
+    <label for="2009">2009</label>
+    <input type="radio" id="q3_2010" name="year" value="2010" checked="checked">
+    <label for="2010">2010</label>
+    
+</div>
+<br>
+<br>
+
+<div id="v2">
+    </div>
+    <h4>Plot:</h4>
+    <div id="v2_plot" class="center_plot">
+    </div>
+</div>    
+<br>
+
+<div>
+<h3>Visualization 3:</h3>
+This visualization answers the question: How has home team fan attendance changed over time? 
+<br> 
+This steamgraph displays the home team attendance for 4 of the teams that have been around the 
+longest (Boston Red Sox, Chicago Cubs, Chicago White Sox, New York Yankees). We can see that over 
+time, attendance has increased for all teams. There were dips in the early 1980s as well as 
+around 1995. I have selected the following colors using different colors from schemeCategory10 
+because the coloring is for categorical data and there are no red and greens since they cannot be 
+differentiated by colorblind people. This steamgraph have line marks, color channgels and horizontal 
+and vertical position channels. 
+<br>
+<div id="v3">
+
+    </div>
+    <h4>Plot:</h4>
+    <div id="v3_plot" class="center_plot">
+    </div>
+</div>    
+<br>
+
+<br>   
+<h4>Visualization 4:</h4>
+This graph answers the question: Where in the United States are the most home runs hit? 
+<br>
+How far a ball travels is dependent on air density and weather and thus it is easier to hit home runs
+in certian parks. This graph has points on a map with the radius representing the amound of home runs hit.
+A larger radius corresponds to more home runs. I chose blue as the color of points because it is easy to view 
+and contrasts well with the white background map. This graph has area and point marks, size channgels and vertical 
+and horizontal position channels. 
+<br>
+<div id="v4">
+
+    </div>
+    <h4>Plot:</h4>
+    <div id="v4_plot" class="center_plot">
+    </div>
+</div>   
+
+<h4>Visualization 5:</h4>
+This graph answers the question: What is the distribution of wins per year for the San Francisco Giants?
+<br> 
+This visualization is a box plot of the number of wins per year for the San Francisco Giants. There are 
+line marks with vertical and horizontal position channels. 
+<br>
+<div id="v5">
+
+    </div>
+    <h4>Plot:</h4>
+    <div id="v5_plot" class="center_plot">
+    </div>
+</div> 
+
+    
+   
+</body>  
+</html>  
